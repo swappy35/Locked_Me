@@ -1,21 +1,23 @@
-.metadata
-bin
-RemoteSystemsTempFiles
+/bin/
 .classpath
+.metadata/
 .project
-abc
-pqr.txt
-xyz.txt
+23
+23.txt
+56
 LockedMe_Output.txt
 LockedMe_Output_NegativeScenerios.txt
-abc.txt
-aqs.doc
-asd
-w.doc
-web.doc
-y
 New Microsoft Word Document.docx
 Output Screenshots.pdf
+RemoteSystemsTempFiles/
 Write up.docx
 Write up.pdf
+abcd
+aqs.doc
+asd
+pqr.txt
 src.rar
+w.doc
+web.doc
+xyz.txt
+y
