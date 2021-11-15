@@ -2,6 +2,8 @@ package main;
 
 import java.lang.String;
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;  
@@ -29,24 +31,23 @@ public class OperationFiles {
 		// To display files in the directory.
 		File dir = new File(".");
 		File[] filesList = dir.listFiles();
+		String[] bufferString = new String[filesList.length];
+		int j=0;
+		for(File file : filesList){
+			bufferString[j] = file.getName();  
+			j++;
+		}
 		System.out.print("\n\t\t\t Total Count: "+filesList.length);
 		if(filesList.length == 0){
 			System.out.print("\n\t\t\t Empty Directory");
 		}
 		else{
 			System.out.print("\n\t\t\t Displaying Files and Directories:");
-			int i=0; 
-			for (File file : filesList) {
-				i++;
-				if(file.isFile()) {
-					System.out.print("\n\t\t\t\t ("+i+")"+file.getName()+" [File]");
-				}
-		 	    if(file.isDirectory()){
-		 	    	System.out.print("\n\t\t\t\t ("+i+")"+file.getName()+" [Directory]");
-		 	    }
-			}        	
+		    Arrays.sort(bufferString, String.CASE_INSENSITIVE_ORDER.reversed());
+		    for(int i=0; i<bufferString.length;i++){
+		    	System.out.print("\n\t\t\t\t ("+(i+1)+") "+bufferString[i]);
+		    }        	
 		}
-		System.out.print("\n");
 	}
 
 	//To perform operations in the present directory.
